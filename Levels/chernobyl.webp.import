@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkrnyp1fynol4"
-path="res://.godot/imported/pngtree-cute-gray-rabbit-little-bunny-png-image_11934067.png-0b41220b2837ab02a2bee3e14e71d454.ctex"
+uid="uid://dexnf2s7mtos3"
+path="res://.godot/imported/chernobyl.webp-6d79d20dc61e9052a84970c28048a9f3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11934067.png"
-dest_files=["res://.godot/imported/pngtree-cute-gray-rabbit-little-bunny-png-image_11934067.png-0b41220b2837ab02a2bee3e14e71d454.ctex"]
+source_file="res://Levels/chernobyl.webp"
+dest_files=["res://.godot/imported/chernobyl.webp-6d79d20dc61e9052a84970c28048a9f3.ctex"]
 
 [params]
 

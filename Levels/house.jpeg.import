@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dxy0wdqvatd01"
-path="res://.godot/imported/pngtree-lapin-gris-png-image_13492544.png-94adb048d9baa3d67739b3076819e7d8.ctex"
+uid="uid://docjj28bleajb"
+path="res://.godot/imported/house.jpeg-09d47fd03abf1b14c268d643df0a835b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-lapin-gris-png-image_13492544.png"
-dest_files=["res://.godot/imported/pngtree-lapin-gris-png-image_13492544.png-94adb048d9baa3d67739b3076819e7d8.ctex"]
+source_file="res://Levels/house.jpeg"
+dest_files=["res://.godot/imported/house.jpeg-09d47fd03abf1b14c268d643df0a835b.ctex"]
 
 [params]
 
