@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:BunnySprite/FishingAnimation/Fishing_2.png.import
-uid="uid://swmihkqiduat"
+uid="uid://dlsxriryc1o62"
 path="res://.godot/imported/Fishing_2.png-42945e000407e84403abfe8b14c99490.ctex"
-========
-uid="uid://docjj28bleajb"
-path="res://.godot/imported/house.jpeg-09d47fd03abf1b14c268d643df0a835b.ctex"
->>>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf:Levels/house.jpeg.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:BunnySprite/FishingAnimation/Fishing_2.png.import
 source_file="res://BunnySprite/FishingAnimation/Fishing_2.png"
 dest_files=["res://.godot/imported/Fishing_2.png-42945e000407e84403abfe8b14c99490.ctex"]
-========
-source_file="res://Levels/house.jpeg"
-dest_files=["res://.godot/imported/house.jpeg-09d47fd03abf1b14c268d643df0a835b.ctex"]
->>>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf:Levels/house.jpeg.import
 
 [params]
 

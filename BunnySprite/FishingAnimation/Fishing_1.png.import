@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< HEAD:BunnySprite/FishingAnimation/Fishing_1.png.import
-uid="uid://hrjk02lbdn3f"
+uid="uid://bfhcq3elq7y2w"
 path="res://.godot/imported/Fishing_1.png-7e11e94ff686b2f5356f6c1f7272ae00.ctex"
-========
-uid="uid://dexnf2s7mtos3"
-path="res://.godot/imported/chernobyl.webp-6d79d20dc61e9052a84970c28048a9f3.ctex"
->>>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf:Levels/chernobyl.webp.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:BunnySprite/FishingAnimation/Fishing_1.png.import
 source_file="res://BunnySprite/FishingAnimation/Fishing_1.png"
 dest_files=["res://.godot/imported/Fishing_1.png-7e11e94ff686b2f5356f6c1f7272ae00.ctex"]
-========
-source_file="res://Levels/chernobyl.webp"
-dest_files=["res://.godot/imported/chernobyl.webp-6d79d20dc61e9052a84970c28048a9f3.ctex"]
->>>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf:Levels/chernobyl.webp.import
 
 [params]
 

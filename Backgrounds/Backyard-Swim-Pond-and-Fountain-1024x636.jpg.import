@@ -2,25 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bx80s4kn3deee"
-<<<<<<<< HEAD:Backgrounds/Backyard-Swim-Pond-and-Fountain-1024x636.jpg.import
+uid="uid://cl1gm4d8cig0a"
 path="res://.godot/imported/Backyard-Swim-Pond-and-Fountain-1024x636.jpg-9420cde81db646728daf1debc6660b13.ctex"
-========
-path="res://.godot/imported/Backyard-Swim-Pond-and-Fountain-1024x636.jpg-519bdae02a53f5c534b4fb089da06466.ctex"
->>>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf:Levels/Backyard-Swim-Pond-and-Fountain-1024x636.jpg.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< HEAD:Backgrounds/Backyard-Swim-Pond-and-Fountain-1024x636.jpg.import
 source_file="res://Backgrounds/Backyard-Swim-Pond-and-Fountain-1024x636.jpg"
 dest_files=["res://.godot/imported/Backyard-Swim-Pond-and-Fountain-1024x636.jpg-9420cde81db646728daf1debc6660b13.ctex"]
-========
-source_file="res://Levels/Backyard-Swim-Pond-and-Fountain-1024x636.jpg"
-dest_files=["res://.godot/imported/Backyard-Swim-Pond-and-Fountain-1024x636.jpg-519bdae02a53f5c534b4fb089da06466.ctex"]
->>>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf:Levels/Backyard-Swim-Pond-and-Fountain-1024x636.jpg.import
 
 [params]
 

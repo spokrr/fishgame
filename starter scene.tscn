@@ -1,20 +1,11 @@
 [gd_scene load_steps=28 format=3 uid="uid://dm0ix3xsxon13"]
 
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://bx80s4kn3deee" path="res://Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="1_npsql"]
-[ext_resource type="Script" path="res://background.gd" id="1_pv0t6"]
-[ext_resource type="Script" path="res://visibilitykillcollision.gd" id="2_38md6"]
-[ext_resource type="Texture2D" uid="uid://docjj28bleajb" path="res://house.jpeg" id="2_aoy80"]
-[ext_resource type="Script" path="res://player_rigidbody.gd" id="3_j1ee0"]
-[ext_resource type="Texture2D" uid="uid://dexnf2s7mtos3" path="res://chernobyl.webp" id="4_71i4p"]
-=======
-[ext_resource type="Texture2D" uid="uid://bx80s4kn3deee" path="res://Levels/Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="1_npsql"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="1_pv0t6"]
 [ext_resource type="Script" path="res://scripts/visibilitykillcollision.gd" id="2_38md6"]
-[ext_resource type="Texture2D" uid="uid://docjj28bleajb" path="res://Levels/house.jpeg" id="2_aoy80"]
+[ext_resource type="Texture2D" uid="uid://cki1fa0hipm8q" path="res://Levels/house.jpeg" id="2_aoy80"]
 [ext_resource type="Script" path="res://scripts/player_rigidbody.gd" id="3_j1ee0"]
-[ext_resource type="Texture2D" uid="uid://dexnf2s7mtos3" path="res://Levels/chernobyl.webp" id="4_71i4p"]
->>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf
+[ext_resource type="Texture2D" uid="uid://d2384ak2derf" path="res://Levels/chernobyl.webp" id="4_71i4p"]
+[ext_resource type="Texture2D" uid="uid://cl1gm4d8cig0a" path="res://Backgrounds/Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="4_kxt2v"]
 [ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
 [ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
 [ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
@@ -22,11 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://do1m624e0oc5x" path="res://BunnySprite/MoveLeftAnimation/MoveL_3.png" id="10_ofa0d"]
 [ext_resource type="Texture2D" uid="uid://bldyuhyce003v" path="res://BunnySprite/MoveRightAnimation/MoveR_1.png" id="11_7sbn8"]
 [ext_resource type="Texture2D" uid="uid://c00e6hht0xamf" path="res://BunnySprite/MoveRightAnimation/MoveR_2.png" id="12_ax3sn"]
-<<<<<<< HEAD
-[ext_resource type="Script" path="res://fishingcast.gd" id="13_0tlfg"]
-=======
 [ext_resource type="Script" path="res://scripts/fishingcast.gd" id="13_0tlfg"]
->>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf
 [ext_resource type="Texture2D" uid="uid://weh4ix4iad3l" path="res://BunnySprite/MoveRightAnimation/MoveR_3.png" id="13_o67qr"]
 [ext_resource type="Texture2D" uid="uid://nd72ecbyglp" path="res://BunnySprite/StillAnimation/Still_1.png" id="14_fsent"]
 [ext_resource type="Texture2D" uid="uid://c3e7s0bo7oyt6" path="res://BunnySprite/StillAnimation/Still_2.png" id="15_q2bnr"]
@@ -174,10 +161,7 @@ metadata/_edit_lock_ = true
 [node name="MainMenu" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
 visible = false
-<<<<<<< HEAD
-=======
 position = Vector2(-1, 0)
->>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
 
@@ -201,7 +185,7 @@ script = ExtResource("2_38md6")
 [node name="backgroundImage" type="TextureRect" parent="background/level1"]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("1_npsql")
+texture = ExtResource("4_kxt2v")
 
 [node name="level1pondCollision" type="CollisionPolygon2D" parent="background/level1"]
 polygon = PackedVector2Array(919, 403, 1144, 396, 1917, 603, 1927, 1088, -8, 1083, -8, 645)
@@ -240,10 +224,7 @@ script = ExtResource("3_j1ee0")
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="playerRigidbody"]
 sprite_frames = SubResource("SpriteFrames_hk7ew")
-<<<<<<< HEAD
-=======
 animation = &"MoveR"
->>>>>>> d042dc98e1d699c1a9194347bc708a33258a43cf
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerRigidbody"]
