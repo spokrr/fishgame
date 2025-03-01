@@ -1,8 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=17 format=3 uid="uid://dm0ix3xsxon13"]
 
 [ext_resource type="Texture2D" uid="uid://bx80s4kn3deee" path="res://Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="1_npsql"]
 [ext_resource type="Texture2D" uid="uid://cv2hwcrf536rg" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-artclip-of-beautifull-cute-gray-graphic-rabbit-little-bunny-sitting-on-png-image_13721252.png" id="2_2h337"]
-[ext_resource type="Script" path="res://player_character.gd" id="2_lfu40"]
+[ext_resource type="Script" path="res://player_rigidbody.gd" id="3_j1ee0"]
 [ext_resource type="Texture2D" uid="uid://cror2ti08tt0g" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-creative-art-of-small-baby-little-gray-bunny-sitting-on-generative-png-image_13721242.png" id="3_l56bx"]
 [ext_resource type="Texture2D" uid="uid://bak748d5kp313" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-clipart-illustration-png-image_14283185.png" id="4_q78g7"]
 [ext_resource type="Texture2D" uid="uid://nijvq05ifkqy" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-illustration-clipart-png-image_14283188.png" id="5_qmp1u"]
@@ -11,6 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bkhpvmf4n2gbh" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458505.png" id="8_o2n3b"]
 [ext_resource type="Texture2D" uid="uid://cmpdxreoqra73" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458506.png" id="9_rofhx"]
 [ext_resource type="Texture2D" uid="uid://beuq6xxdsxs30" path="res://Screenshot 2025-02-28 at 7.37.19 PM.png" id="10_7xxbj"]
+[ext_resource type="Script" path="res://fishingcast.gd" id="13_0tlfg"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2odfv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hk7ew"]
 animations = [{
@@ -44,32 +47,59 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6j4tc"]
+radius = 78.3333
+height = 156.667
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o17kp"]
 
-[node name="Node2D" type="Node2D"]
+[node name="mainScene" type="Node2D"]
 
-[node name="background" type="TextureRect" parent="."]
+[node name="background" type="Node2D" parent="."]
+
+[node name="backgroundImage" type="TextureRect" parent="background"]
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_npsql")
 
-[node name="playerCharacter" type="Node2D" parent="."]
-position = Vector2(1004, 265)
-scale = Vector2(0.6, 0.6)
-script = ExtResource("2_lfu40")
+[node name="StaticBody2D" type="StaticBody2D" parent="background"]
+physics_material_override = SubResource("PhysicsMaterial_2odfv")
 
-[node name="playerSprite" type="AnimatedSprite2D" parent="playerCharacter"]
+[node name="pondCollision" type="CollisionPolygon2D" parent="background/StaticBody2D"]
+polygon = PackedVector2Array(919, 403, 1144, 396, 1917, 603, 1927, 1088, -8, 1083, -8, 645)
+
+[node name="skycollision" type="CollisionPolygon2D" parent="background/StaticBody2D"]
+polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
+
+[node name="playerCharacter" type="Node2D" parent="."]
+visible = false
+scale = Vector2(0.6, 0.6)
+
+[node name="playerRigidbody" type="CharacterBody2D" parent="."]
+position = Vector2(1005, 290)
+scale = Vector2(0.6, 0.6)
+slide_on_ceiling = false
+script = ExtResource("3_j1ee0")
+
+[node name="playerSprite" type="AnimatedSprite2D" parent="playerRigidbody"]
 sprite_frames = SubResource("SpriteFrames_hk7ew")
 frame = 3
 frame_progress = 0.181687
+metadata/_edit_group_ = true
 
-[node name="fishingRod" type="Sprite2D" parent="playerCharacter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerRigidbody"]
+position = Vector2(0, 91.6667)
+shape = SubResource("CapsuleShape2D_6j4tc")
+metadata/_edit_group_ = true
+
+[node name="fishingRod" type="Sprite2D" parent="playerRigidbody"]
 visible = false
 position = Vector2(194.458, -0.833374)
 scale = Vector2(0.312696, 0.290404)
 texture = ExtResource("10_7xxbj")
+script = ExtResource("13_0tlfg")
 
-[node name="fishingBob" type="Sprite2D" parent="playerCharacter/fishingRod"]
+[node name="fishingBob" type="Sprite2D" parent="playerRigidbody/fishingRod"]
 position = Vector2(417.47, 238.174)
 scale = Vector2(215.431, 164.065)
 texture = SubResource("PlaceholderTexture2D_o17kp")
