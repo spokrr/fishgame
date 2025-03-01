@@ -160,7 +160,7 @@ metadata/_edit_lock_ = true
 
 [node name="MainMenu" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
-visible = false
+position = Vector2(-1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
 
@@ -170,10 +170,10 @@ offset_bottom = 1080.0
 texture = ExtResource("2_aoy80")
 
 [node name="mainmenuground" type="CollisionPolygon2D" parent="background/MainMenu"]
-polygon = PackedVector2Array(757, 889, 1190, 903, 1917, 603, 1927, 1088, -8, 1083, -8, 645)
+polygon = PackedVector2Array(593, 682, 919, 793, 1335, 688, 1560, 773, 1486, 878, 1558, 931, 1930, 885, 1927, 1088, -8, 1083, -12, 829, 302, 856, 329, 732)
 
 [node name="mainmenusky" type="CollisionPolygon2D" parent="background/MainMenu"]
-polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
+polygon = PackedVector2Array(677, 218, 803, 365, 1021, 383, 1224, 230, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
 
 [node name="level1" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
