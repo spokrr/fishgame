@@ -12,18 +12,17 @@ var state = CharState.WALKIN
 func _ready() -> void:
 	position = Vector2(400,500)
 
-
-func _input(event):
-	if event.is_action_pressed("spaceBar"):
-		castLine()
-		# isCast = castLine(isCast) # run the code for casting a line.
-
+#this function will be called from the script on the rod, which handles the fishing.
+#this specific function will update the visuals of the sprites.
 func castLine():
 	if state == CharState.WALKIN: # we're walkin, we want to fishin
 		state = CharState.FISHIN
+		#these visibility statements will get changed later.
 		get_node("fishingRod").visible = true
 		$playerSprite.play("fishing")
-		$fishingRod.fishing();
+		
+		#this gets removed for now, we'll call it on the rod itself
+		#$fishingRod.fishing();
 		
 	elif state == CharState.FISHIN:
 		state = CharState.WALKIN #  we walkin now
