@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=33 format=3 uid="uid://dm0ix3xsxon13"]
 
 [ext_resource type="Script" path="res://scripts/background.gd" id="1_pv0t6"]
 [ext_resource type="Script" path="res://scripts/visibilitykillcollision.gd" id="2_38md6"]
@@ -13,13 +13,18 @@
 [ext_resource type="Texture2D" uid="uid://do1m624e0oc5x" path="res://BunnySprite/MoveLeftAnimation/MoveL_3.png" id="10_ofa0d"]
 [ext_resource type="Texture2D" uid="uid://bldyuhyce003v" path="res://BunnySprite/MoveRightAnimation/MoveR_1.png" id="11_7sbn8"]
 [ext_resource type="Texture2D" uid="uid://c00e6hht0xamf" path="res://BunnySprite/MoveRightAnimation/MoveR_2.png" id="12_ax3sn"]
-[ext_resource type="Script" path="res://scripts/fishingcast.gd" id="13_0tlfg"]
 [ext_resource type="Texture2D" uid="uid://weh4ix4iad3l" path="res://BunnySprite/MoveRightAnimation/MoveR_3.png" id="13_o67qr"]
 [ext_resource type="Texture2D" uid="uid://nd72ecbyglp" path="res://BunnySprite/StillAnimation/Still_1.png" id="14_fsent"]
 [ext_resource type="Texture2D" uid="uid://c3e7s0bo7oyt6" path="res://BunnySprite/StillAnimation/Still_2.png" id="15_q2bnr"]
 [ext_resource type="Texture2D" uid="uid://dwrvesnb4dstr" path="res://BunnySprite/StillAnimation/Still_3.png" id="16_2d5uy"]
 [ext_resource type="Texture2D" uid="uid://dhvclbphc3t28" path="res://BunnySprite/StillAnimation/Still_2Alt.png" id="17_k1a3y"]
 [ext_resource type="Texture2D" uid="uid://qbux67n000uc" path="res://BunnySprite/StillAnimation/Still_3Alt.png" id="18_un2pg"]
+[ext_resource type="Texture2D" uid="uid://bfhcq3elq7y2w" path="res://BunnySprite/FishingAnimation/Fishing_1.png" id="19_t8eue"]
+[ext_resource type="Texture2D" uid="uid://djolksdpcq1bv" path="res://BunnySprite/FishingAnimation/Fishing_2NoLeg.png" id="20_1735n"]
+[ext_resource type="Texture2D" uid="uid://dlxmhveknysj6" path="res://BunnySprite/FishingAnimation/Fishing_3NoLeg.png" id="21_u4sxw"]
+[ext_resource type="Texture2D" uid="uid://dlsxriryc1o62" path="res://BunnySprite/FishingAnimation/Fishing_2.png" id="22_5dgm2"]
+[ext_resource type="Texture2D" uid="uid://6syo4t3rrlx8" path="res://BunnySprite/FishingAnimation/Fishing_3.png" id="23_oshas"]
+[ext_resource type="Script" path="res://scripts/fishing.gd" id="25_xs2m1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5v47"]
 size = Vector2(58, 1095)
@@ -126,6 +131,59 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_t8eue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1735n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_u4sxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1735n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t8eue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1735n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_u4sxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1735n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t8eue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1735n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_u4sxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_1735n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_t8eue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5dgm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_oshas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_5dgm2")
+}],
+"loop": true,
+"name": &"fishing",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6j4tc"]
@@ -224,7 +282,8 @@ script = ExtResource("3_j1ee0")
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="playerRigidbody"]
 sprite_frames = SubResource("SpriteFrames_hk7ew")
-animation = &"MoveR"
+animation = &"fishing"
+frame_progress = 0.789149
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerRigidbody"]
@@ -237,7 +296,7 @@ visible = false
 position = Vector2(194.458, -0.833374)
 scale = Vector2(0.312696, 0.290404)
 texture = ExtResource("10_7xxbj")
-script = ExtResource("13_0tlfg")
+script = ExtResource("25_xs2m1")
 
 [node name="fishingBob" type="Sprite2D" parent="playerRigidbody/fishingRod"]
 position = Vector2(417.47, 238.174)
