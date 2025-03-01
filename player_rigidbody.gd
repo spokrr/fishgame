@@ -17,16 +17,16 @@ func _physics_process(delta: float) -> void:
 	position = position.clamp(Vector2(0,0), screen_size)
 	
 	if Input.is_action_pressed("moveRight"):
-		$playerSprite.play("default")
+		$playerSprite.play("MoveR")
 		#position.x += speed * delta
 	elif Input.is_action_pressed("moveLeft"):
-		$playerSprite.play("default")
+		$playerSprite.play("MoveL")
 		#position.x -= speed * delta
 	elif Input.is_action_pressed("moveDown"):
-		$playerSprite.play("default")
+		$playerSprite.play("MoveL")
 		#position.y += speed * delta
 	elif Input.is_action_pressed("moveUp"):
-		$playerSprite.play("default")
+		$playerSprite.play("MoveR")
 		#position.y -= speed * delta
 	else:
-		$playerSprite.stop()
+		$playerSprite.play("default")
