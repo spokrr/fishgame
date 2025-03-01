@@ -17,7 +17,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if currentlyFishing and Input.is_action_just_pressed("confirmButton") and catchTimer.is_stopped() == false: # ui_accept should map to left click (?), just saw this line in a youtube video for godot fishing...
+	if currentlyFishing and Input.is_action_just_pressed("spaceBar") and catchTimer.is_stopped() == false: # ui_accept should map to left click (?), just saw this line in a youtube video for godot fishing...
 		catchFish()
 
 func fishing():
