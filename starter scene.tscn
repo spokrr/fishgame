@@ -1,3 +1,57 @@
-[gd_scene format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=11 format=3 uid="uid://dm0ix3xsxon13"]
+
+[ext_resource type="Texture2D" uid="uid://bx80s4kn3deee" path="res://Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="1_npsql"]
+[ext_resource type="Texture2D" uid="uid://cv2hwcrf536rg" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-artclip-of-beautifull-cute-gray-graphic-rabbit-little-bunny-sitting-on-png-image_13721252.png" id="2_2h337"]
+[ext_resource type="Texture2D" uid="uid://cror2ti08tt0g" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-creative-art-of-small-baby-little-gray-bunny-sitting-on-generative-png-image_13721242.png" id="3_l56bx"]
+[ext_resource type="Texture2D" uid="uid://bak748d5kp313" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-clipart-illustration-png-image_14283185.png" id="4_q78g7"]
+[ext_resource type="Texture2D" uid="uid://nijvq05ifkqy" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-illustration-clipart-png-image_14283188.png" id="5_qmp1u"]
+[ext_resource type="Texture2D" uid="uid://7ebif2ay3pgx" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458502.png" id="6_rrj1m"]
+[ext_resource type="Texture2D" uid="uid://dhil1txm6olxf" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458503.png" id="7_t7il7"]
+[ext_resource type="Texture2D" uid="uid://bkhpvmf4n2gbh" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458505.png" id="8_o2n3b"]
+[ext_resource type="Texture2D" uid="uid://cmpdxreoqra73" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458506.png" id="9_rofhx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hk7ew"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_2h337")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_l56bx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q78g7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qmp1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rrj1m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_t7il7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_o2n3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rofhx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_npsql")
+
+[node name="player" type="AnimatedSprite2D" parent="."]
+position = Vector2(1004, 265)
+scale = Vector2(0.6, 0.6)
+sprite_frames = SubResource("SpriteFrames_hk7ew")
+frame = 3
+frame_progress = 0.181687
