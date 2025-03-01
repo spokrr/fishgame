@@ -5,7 +5,7 @@ const speed = 500
 @onready var screen_size = get_viewport_rect().size
 
 func _ready() ->void:
-	position = Vector2(1000,300)
+	position = Vector2(400,500)
 
 
 func _physics_process(delta: float) -> void:
