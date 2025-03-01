@@ -1,4 +1,9 @@
-[gd_scene load_steps=24 format=3 uid="uid://dm0ix3xsxon13"]
+
+[gd_scene load_steps=28 format=3 uid="uid://dm0ix3xsxon13"]
+
+[ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
+[ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
+[ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
 
 [ext_resource type="Texture2D" uid="uid://bx80s4kn3deee" path="res://Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="1_npsql"]
 [ext_resource type="Script" path="res://background.gd" id="1_pv0t6"]
@@ -14,8 +19,27 @@
 [ext_resource type="Texture2D" uid="uid://dhil1txm6olxf" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458503.png" id="7_t7il7"]
 [ext_resource type="Texture2D" uid="uid://bkhpvmf4n2gbh" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458505.png" id="8_o2n3b"]
 [ext_resource type="Texture2D" uid="uid://cmpdxreoqra73" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458506.png" id="9_rofhx"]
+
 [ext_resource type="Texture2D" uid="uid://beuq6xxdsxs30" path="res://Screenshot 2025-02-28 at 7.37.19 PM.png" id="10_7xxbj"]
+[ext_resource type="Texture2D" uid="uid://do1m624e0oc5x" path="res://BunnySprite/MoveLeftAnimation/MoveL_3.png" id="10_ofa0d"]
+[ext_resource type="Texture2D" uid="uid://bldyuhyce003v" path="res://BunnySprite/MoveRightAnimation/MoveR_1.png" id="11_7sbn8"]
+[ext_resource type="Texture2D" uid="uid://c00e6hht0xamf" path="res://BunnySprite/MoveRightAnimation/MoveR_2.png" id="12_ax3sn"]
 [ext_resource type="Script" path="res://fishingcast.gd" id="13_0tlfg"]
+[ext_resource type="Texture2D" uid="uid://weh4ix4iad3l" path="res://BunnySprite/MoveRightAnimation/MoveR_3.png" id="13_o67qr"]
+[ext_resource type="Texture2D" uid="uid://nd72ecbyglp" path="res://BunnySprite/StillAnimation/Still_1.png" id="14_fsent"]
+[ext_resource type="Texture2D" uid="uid://c3e7s0bo7oyt6" path="res://BunnySprite/StillAnimation/Still_2.png" id="15_q2bnr"]
+[ext_resource type="Texture2D" uid="uid://dwrvesnb4dstr" path="res://BunnySprite/StillAnimation/Still_3.png" id="16_2d5uy"]
+[ext_resource type="Texture2D" uid="uid://dhvclbphc3t28" path="res://BunnySprite/StillAnimation/Still_2Alt.png" id="17_k1a3y"]
+[ext_resource type="Texture2D" uid="uid://qbux67n000uc" path="res://BunnySprite/StillAnimation/Still_3Alt.png" id="18_un2pg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5v47"]
+size = Vector2(58, 1095)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk1vb"]
+size = Vector2(65.5, 1099)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_p2e62"]
+size = Vector2(1920, 1080)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5v47"]
 size = Vector2(58, 1095)
@@ -32,28 +56,92 @@ size = Vector2(1920, 1080)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_2h337")
+"texture": ExtResource("7_r3qw2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_l56bx")
+"texture": ExtResource("8_5n5y5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_q78g7")
+"texture": ExtResource("9_1or18")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_qmp1u")
+"texture": ExtResource("10_ofa0d")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_rrj1m")
+"texture": ExtResource("9_1or18")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_t7il7")
+"texture": ExtResource("8_5n5y5")
+}],
+"loop": true,
+"name": &"MoveL",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7sbn8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_o2n3b")
+"texture": ExtResource("12_ax3sn")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_rofhx")
+"texture": ExtResource("13_o67qr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ax3sn")
+}],
+"loop": true,
+"name": &"MoveR",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_fsent")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q2bnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2d5uy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q2bnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fsent")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q2bnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2d5uy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q2bnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fsent")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q2bnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2d5uy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_q2bnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fsent")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_k1a3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_un2pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_k1a3y")
 }],
 "loop": true,
 "name": &"default",
@@ -70,6 +158,7 @@ height = 156.667
 
 [node name="background" type="Node2D" parent="."]
 script = ExtResource("1_pv0t6")
+
 
 [node name="leftArea" type="Area2D" parent="background"]
 position = Vector2(47.5, 537.5)
@@ -92,6 +181,7 @@ metadata/_edit_lock_ = true
 
 [node name="MainMenu" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
@@ -106,6 +196,7 @@ polygon = PackedVector2Array(593, 682, 919, 793, 1335, 688, 1560, 773, 1486, 878
 
 [node name="mainmenusky" type="CollisionPolygon2D" parent="background/MainMenu"]
 polygon = PackedVector2Array(677, 218, 803, 365, 1021, 383, 1224, 230, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
+
 
 [node name="level1" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
@@ -155,8 +246,7 @@ script = ExtResource("3_j1ee0")
 
 [node name="playerSprite" type="AnimatedSprite2D" parent="playerRigidbody"]
 sprite_frames = SubResource("SpriteFrames_hk7ew")
-frame = 3
-frame_progress = 0.181687
+animation = &"MoveR"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerRigidbody"]
