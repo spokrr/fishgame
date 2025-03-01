@@ -1,25 +1,14 @@
-
 [gd_scene load_steps=28 format=3 uid="uid://dm0ix3xsxon13"]
-
-[ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
-[ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
-[ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
 
 [ext_resource type="Texture2D" uid="uid://bx80s4kn3deee" path="res://Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="1_npsql"]
 [ext_resource type="Script" path="res://background.gd" id="1_pv0t6"]
-[ext_resource type="Texture2D" uid="uid://cv2hwcrf536rg" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-artclip-of-beautifull-cute-gray-graphic-rabbit-little-bunny-sitting-on-png-image_13721252.png" id="2_2h337"]
 [ext_resource type="Script" path="res://visibilitykillcollision.gd" id="2_38md6"]
 [ext_resource type="Texture2D" uid="uid://docjj28bleajb" path="res://house.jpeg" id="2_aoy80"]
 [ext_resource type="Script" path="res://player_rigidbody.gd" id="3_j1ee0"]
-[ext_resource type="Texture2D" uid="uid://cror2ti08tt0g" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-creative-art-of-small-baby-little-gray-bunny-sitting-on-generative-png-image_13721242.png" id="3_l56bx"]
 [ext_resource type="Texture2D" uid="uid://dexnf2s7mtos3" path="res://chernobyl.webp" id="4_71i4p"]
-[ext_resource type="Texture2D" uid="uid://bak748d5kp313" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-clipart-illustration-png-image_14283185.png" id="4_q78g7"]
-[ext_resource type="Texture2D" uid="uid://nijvq05ifkqy" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-illustration-clipart-png-image_14283188.png" id="5_qmp1u"]
-[ext_resource type="Texture2D" uid="uid://7ebif2ay3pgx" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458502.png" id="6_rrj1m"]
-[ext_resource type="Texture2D" uid="uid://dhil1txm6olxf" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458503.png" id="7_t7il7"]
-[ext_resource type="Texture2D" uid="uid://bkhpvmf4n2gbh" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458505.png" id="8_o2n3b"]
-[ext_resource type="Texture2D" uid="uid://cmpdxreoqra73" path="res://Cute Gray Rabbit Little Bunny, Festive, Graphic, Poster PNG Transparent Image and Clipart for Free Download_files/pngtree-cute-gray-rabbit-little-bunny-png-image_11458506.png" id="9_rofhx"]
-
+[ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
+[ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
+[ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
 [ext_resource type="Texture2D" uid="uid://beuq6xxdsxs30" path="res://Screenshot 2025-02-28 at 7.37.19 PM.png" id="10_7xxbj"]
 [ext_resource type="Texture2D" uid="uid://do1m624e0oc5x" path="res://BunnySprite/MoveLeftAnimation/MoveL_3.png" id="10_ofa0d"]
 [ext_resource type="Texture2D" uid="uid://bldyuhyce003v" path="res://BunnySprite/MoveRightAnimation/MoveR_1.png" id="11_7sbn8"]
@@ -31,15 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://dwrvesnb4dstr" path="res://BunnySprite/StillAnimation/Still_3.png" id="16_2d5uy"]
 [ext_resource type="Texture2D" uid="uid://dhvclbphc3t28" path="res://BunnySprite/StillAnimation/Still_2Alt.png" id="17_k1a3y"]
 [ext_resource type="Texture2D" uid="uid://qbux67n000uc" path="res://BunnySprite/StillAnimation/Still_3Alt.png" id="18_un2pg"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5v47"]
-size = Vector2(58, 1095)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jk1vb"]
-size = Vector2(65.5, 1099)
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_p2e62"]
-size = Vector2(1920, 1080)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5v47"]
 size = Vector2(58, 1095)
@@ -159,7 +139,6 @@ height = 156.667
 [node name="background" type="Node2D" parent="."]
 script = ExtResource("1_pv0t6")
 
-
 [node name="leftArea" type="Area2D" parent="background"]
 position = Vector2(47.5, 537.5)
 
@@ -196,7 +175,6 @@ polygon = PackedVector2Array(593, 682, 919, 793, 1335, 688, 1560, 773, 1486, 878
 
 [node name="mainmenusky" type="CollisionPolygon2D" parent="background/MainMenu"]
 polygon = PackedVector2Array(677, 218, 803, 365, 1021, 383, 1224, 230, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
-
 
 [node name="level1" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
@@ -239,7 +217,7 @@ scale = Vector2(0.6, 0.6)
 
 [node name="playerRigidbody" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(506, 384)
+position = Vector2(407, 500)
 scale = Vector2(0.6, 0.6)
 slide_on_ceiling = false
 script = ExtResource("3_j1ee0")
@@ -250,6 +228,7 @@ animation = &"MoveR"
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="playerRigidbody"]
+position = Vector2(-1.66672, 78.3333)
 shape = SubResource("CapsuleShape2D_6j4tc")
 metadata/_edit_group_ = true
 
