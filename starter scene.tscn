@@ -48,6 +48,72 @@ size = Vector2(1920, 1080)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2odfv"]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcfcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gwkic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_djsy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lp7m7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_djsy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gwkic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rd3y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_baevv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rd3y5")
+}],
+"loop": true,
+"name": &"in water",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4q0j0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_x6v0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pavry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_55jsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pavry")
+}],
+"loop": true,
+"name": &"fishHooked",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("34_b2rtj")
+}, {
+"duration": 2.0,
+"texture": ExtResource("35_eg1pf")
+}, {
+"duration": 2.0,
+"texture": ExtResource("36_11ora")
+}],
+"loop": true,
+"name": &"waiting",
+"speed": 2.0
+}]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_hk7ew"]
 animations = [{
 "frames": [{
@@ -201,72 +267,6 @@ animations = [{
 radius = 78.3333
 height = 156.667
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_fcfcj"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("26_gwkic")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_djsy3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("28_lp7m7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("27_djsy3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("26_gwkic")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_rd3y5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("30_baevv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("29_rd3y5")
-}],
-"loop": true,
-"name": &"in water",
-"speed": 2.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4q0j0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("31_x6v0r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_pavry")
-}, {
-"duration": 1.0,
-"texture": ExtResource("33_55jsl")
-}, {
-"duration": 1.0,
-"texture": ExtResource("32_pavry")
-}],
-"loop": true,
-"name": &"fishHooked",
-"speed": 24.0
-}, {
-"frames": [{
-"duration": 2.0,
-"texture": ExtResource("34_b2rtj")
-}, {
-"duration": 2.0,
-"texture": ExtResource("35_eg1pf")
-}, {
-"duration": 2.0,
-"texture": ExtResource("36_11ora")
-}],
-"loop": true,
-"name": &"waiting",
-"speed": 2.0
-}]
-
 [node name="mainScene" type="Node2D"]
 
 [node name="pond" type="Node2D" parent="."]
@@ -358,30 +358,16 @@ scale = Vector2(0.6, 0.6)
 slide_on_ceiling = false
 script = ExtResource("3_j1ee0")
 
-[node name="playerSprite" type="AnimatedSprite2D" parent="playerRigidbody"]
-sprite_frames = SubResource("SpriteFrames_hk7ew")
-animation = &"fishing"
-frame_progress = 0.789149
-metadata/_edit_group_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="playerRigidbody"]
-position = Vector2(-1.66672, 78.3333)
-shape = SubResource("CapsuleShape2D_6j4tc")
-metadata/_edit_group_ = true
-
 [node name="fishingRod" type="Sprite2D" parent="playerRigidbody"]
-visible = false
 position = Vector2(194.458, -0.833374)
 scale = Vector2(0.312696, 0.290404)
 script = ExtResource("25_xs2m1")
 
 [node name="fishingBob" type="Node2D" parent="playerRigidbody/fishingRod"]
-visible = false
 scale = Vector2(1.5, 1.5)
 
-[node name="Line2D" type="Line2D" parent="playerRigidbody/fishingRod/fishingBob"]
-visible = false
-points = PackedVector2Array(-2.39783, -369.217, 4.70886, 1.91309)
+[node name="fishingline" type="Line2D" parent="playerRigidbody/fishingRod/fishingBob"]
+points = PackedVector2Array(-2.39783, -411.304, 171.715, 468.696, 253.442, 702.087, 484.408, 992.87)
 
 [node name="fishingBobberAnimation" type="AnimatedSprite2D" parent="playerRigidbody/fishingRod/fishingBob"]
 position = Vector2(495.068, 1015.83)
@@ -394,7 +380,16 @@ position = Vector2(927.107, 778.609)
 scale = Vector2(0.888772, 1.34901)
 sprite_frames = SubResource("SpriteFrames_4q0j0")
 animation = &"waiting"
-frame_progress = 0.465006
+
+[node name="playerSprite" type="AnimatedSprite2D" parent="playerRigidbody"]
+sprite_frames = SubResource("SpriteFrames_hk7ew")
+animation = &"fishing"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="playerRigidbody"]
+position = Vector2(-1.66672, 78.3333)
+shape = SubResource("CapsuleShape2D_6j4tc")
+metadata/_edit_group_ = true
 
 [node name="uipopup" type="Node2D" parent="."]
 unique_name_in_owner = true
