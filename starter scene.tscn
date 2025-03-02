@@ -406,6 +406,6 @@ metadata/_edit_group_ = true
 [node name="uipopup" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[connection signal="body_entered" from="background/leftArea" to="background" method="_on_left_area_body_entered"]
 [connection signal="body_entered" from="background/leftArea" to="background" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="background/leftArea" to="background" method="_on_left_area_body_entered"]
 [connection signal="body_entered" from="background/rightArea" to="background" method="_on_right_area_body_entered"]
