@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://4dpg5j7alxty"]
+[gd_scene load_steps=12 format=3 uid="uid://4dpg5j7alxty"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_bwwkw"]
 [ext_resource type="Texture2D" uid="uid://hj4oiqmopshw" path="res://Backgrounds/clouds/purple menu clouds/static bg.png" id="2_beomi"]
 [ext_resource type="Texture2D" uid="uid://x4by2jp1e6gn" path="res://Backgrounds/buttons/Play Normal.png" id="2_pp67y"]
+[ext_resource type="Texture2D" uid="uid://bt7aihtjutgtm" path="res://Backgrounds/buttons/FISH-GAME-3-1-2025.png" id="3_8qx45"]
 [ext_resource type="Texture2D" path="res://Backgrounds/buttons/Start Press.png" id="3_yydgo"]
+[ext_resource type="Texture2D" uid="uid://c2bx6wfmogoji" path="res://Backgrounds/buttons/title hover.png" id="4_c47fp"]
 [ext_resource type="Texture2D" uid="uid://b0qaojgti0q73" path="res://Backgrounds/buttons/Play Hover.png" id="4_lew53"]
 [ext_resource type="Texture2D" uid="uid://b80gto4f4pkca" path="res://Backgrounds/buttons/Quit Normal.png" id="5_d2rri"]
 [ext_resource type="Texture2D" uid="uid://bk7bsi7unicy3" path="res://Backgrounds/buttons/Quit Press.png" id="6_tfyo8"]
@@ -30,6 +32,24 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_nsffy")
 
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -512.0
+offset_top = -111.0
+offset_right = 512.0
+offset_bottom = 111.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(512, 500)
+texture_normal = ExtResource("3_8qx45")
+texture_hover = ExtResource("4_c47fp")
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -38,9 +58,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -31.0
-offset_top = -32.0
+offset_top = 160.0
 offset_right = 31.0
-offset_bottom = 32.0
+offset_bottom = 224.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(4, 4)
@@ -48,6 +68,7 @@ pivot_offset = Vector2(31, 33)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 layout_mode = 2
+theme_override_constants/separation = 9
 alignment = 1
 
 [node name="Play" type="TextureButton" parent="CenterContainer/VBoxContainer"]
