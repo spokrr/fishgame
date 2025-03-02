@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=45 format=3 uid="uid://dm0ix3xsxon13"]
 
 [ext_resource type="Script" path="res://scripts/fish.gd" id="1_oi8tk"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="1_pv0t6"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
 [ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
 [ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
-[ext_resource type="Texture2D" uid="uid://beuq6xxdsxs30" path="res://Screenshot 2025-02-28 at 7.37.19 PM.png" id="10_7xxbj"]
 [ext_resource type="Texture2D" uid="uid://do1m624e0oc5x" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_3.png" id="10_ofa0d"]
 [ext_resource type="Texture2D" uid="uid://bldyuhyce003v" path="res://animations/BunnySprite/MoveRightAnimation/MoveR_1.png" id="11_7sbn8"]
 [ext_resource type="Texture2D" uid="uid://c00e6hht0xamf" path="res://animations/BunnySprite/MoveRightAnimation/MoveR_2.png" id="12_ax3sn"]
@@ -374,7 +373,6 @@ metadata/_edit_group_ = true
 visible = false
 position = Vector2(194.458, -0.833374)
 scale = Vector2(0.312696, 0.290404)
-texture = ExtResource("10_7xxbj")
 script = ExtResource("25_xs2m1")
 
 [node name="fishingBob" type="Node2D" parent="playerRigidbody/fishingRod"]
