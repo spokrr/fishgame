@@ -144,11 +144,11 @@ offset_bottom = 213.667
 theme = SubResource("Theme_7lp4e")
 theme_override_fonts/normal_font = ExtResource("3_r3qg4")
 bbcode_enabled = true
-text = "Length (kg):
+text = "Length (inches):
 
 
 
-Weight (inches):"
+Weight (lbs):"
 scroll_active = false
 
 [node name="length" type="RichTextLabel" parent="stats"]

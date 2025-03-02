@@ -7,8 +7,8 @@ var catchTimer: Timer # waiting for person to click screen to catch
 #var defaultFish: Fish = %fish.rollFish()
 
 #min and max for fish waiting times.
-var waitingMin: float = 3.0
-var waitingMax: float = 8.0
+var waitingMin: float = 2.0
+var waitingMax: float = 5.0
 
 #possible fishing states. the fishing logic is a state machine.
 enum FishingStatus {
