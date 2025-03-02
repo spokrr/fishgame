@@ -1,11 +1,9 @@
-[gd_scene load_steps=48 format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=46 format=3 uid="uid://dm0ix3xsxon13"]
 
 [ext_resource type="Script" path="res://scripts/fish.gd" id="1_oi8tk"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="1_pv0t6"]
 [ext_resource type="Script" path="res://scripts/visibilitykillcollision.gd" id="2_38md6"]
 [ext_resource type="Script" path="res://scripts/player_rigidbody.gd" id="3_j1ee0"]
-[ext_resource type="Texture2D" uid="uid://d2384ak2derf" path="res://Levels/chernobyl.webp" id="4_71i4p"]
-[ext_resource type="Texture2D" uid="uid://cl1gm4d8cig0a" path="res://Backgrounds/Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="4_kxt2v"]
 [ext_resource type="Texture2D" uid="uid://cgamtak6urdm8" path="res://Backgrounds/bg_1.png" id="4_xqua4"]
 [ext_resource type="Texture2D" uid="uid://cvjxdpairla0p" path="res://Backgrounds/bg_3.png" id="5_ya05y"]
 [ext_resource type="Texture2D" uid="uid://bvaqhc33fd3w2" path="res://Backgrounds/bg_2.png" id="6_muc6e"]
@@ -320,6 +318,7 @@ polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -
 
 [node name="level1" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
@@ -337,6 +336,7 @@ polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -
 
 [node name="level2" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
+visible = false
 position = Vector2(-1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
@@ -351,40 +351,6 @@ polygon = PackedVector2Array(765, 593, 1161, 595, 1917, 603, 1927, 1088, -8, 108
 
 [node name="sky" type="CollisionPolygon2D" parent="background/level2"]
 polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -6, 319)
-
-[node name="level3" type="StaticBody2D" parent="background"]
-unique_name_in_owner = true
-physics_material_override = SubResource("PhysicsMaterial_2odfv")
-script = ExtResource("2_38md6")
-
-[node name="backgroundImage" type="TextureRect" parent="background/level3"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("4_kxt2v")
-
-[node name="ground" type="CollisionPolygon2D" parent="background/level3"]
-polygon = PackedVector2Array(919, 403, 1144, 396, 1917, 603, 1927, 1088, -8, 1083, -8, 645)
-
-[node name="sky" type="CollisionPolygon2D" parent="background/level3"]
-polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
-
-[node name="level4" type="StaticBody2D" parent="background"]
-unique_name_in_owner = true
-visible = false
-physics_material_override = SubResource("PhysicsMaterial_2odfv")
-script = ExtResource("2_38md6")
-
-[node name="backgroundImage" type="TextureRect" parent="background/level4"]
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("4_71i4p")
-
-[node name="ground" type="CollisionPolygon2D" parent="background/level4"]
-polygon = PackedVector2Array(904, 571, 1670, 556, 1929, 602, 1927, 1088, -8, 1083, -11, 558)
-
-[node name="sky" type="CollisionPolygon2D" parent="background/level4"]
-position = Vector2(0, -91)
-polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
 
 [node name="playerRigidbody" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
@@ -417,7 +383,6 @@ scale = Vector2(1.5, 1.5)
 
 [node name="Line2D" type="Line2D" parent="playerRigidbody/fishingRod/fishingBob"]
 visible = false
-scale = Vector2(1, 1)
 points = PackedVector2Array(-2.39783, -369.217, 4.70886, 1.91309)
 
 [node name="fishingBobberAnimation" type="AnimatedSprite2D" parent="playerRigidbody/fishingRod/fishingBob"]
