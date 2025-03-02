@@ -78,8 +78,14 @@ func roll_fish() -> Fish: # will return err in some broken states (db not open?)
 	if returnFish.speciesName == "missing" or returnFish.speciesName.contains("card"):
 		returnFish.weight = speciesDict["base_weight"]
 		returnFish.length = speciesDict["base_length"]
-	
-	
-	
+		
+	if returnFish.speciesName.contains("card"):
+		match returnFish.speciesName:
+			"fishcard":
+				returnFish.speciesName = "Fish Card"
+			"fishwormcard":
+				returnFish.speciesName = "Fish & Worm Card"
+			"fishwormcardlgbt":
+				returnFish.speciesName = "Fish & Worm Card (Rainbow Rare!)"	
 	return returnFish
 	
