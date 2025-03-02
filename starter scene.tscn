@@ -351,6 +351,8 @@ polygon = PackedVector2Array(765, 593, 1161, 595, 1917, 603, 1927, 1088, -8, 108
 [node name="sky" type="CollisionPolygon2D" parent="background/level2"]
 polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -6, 319)
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="background"]
+
 [node name="playerRigidbody" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(407, 500)

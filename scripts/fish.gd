@@ -1,6 +1,7 @@
 extends Node
 
-
+#i put this script on an empty node, because the script needs to be on an object 
+#for me to access it from another script. weird, idk how else to do it
 var speciesName
 var speciesID
 var rarity
