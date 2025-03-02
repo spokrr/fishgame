@@ -143,7 +143,8 @@ func showCaughtFish(caughtFish: Fish) ->void:
 	#TODO: IMPLEMENT THE ROLLFISH FUNCTION ABOVE, SO THESE LINES CAN WORK. NEEDS TO BE DONE.
 	fishcaught.position = Vector2(960,540)
 	fishcaught.species.text = str("[center]",str(caughtFish.speciesName),"[/center]")
-	fishcaught.image = str("res://fish/", caughtFish.speciesName, ".png")
+	fishcaught.image.set_texture(load(str("res://fish/", caughtFish.speciesName, ".png")))
+	print(str("loaded ", str("res://fish/", caughtFish.speciesName, ".png"), " from file"))
 	if caughtFish.speciesName == "tungstencube":
 		fishcaught.image = "res://fish/tungsten.jpg"
 	fishcaught.description.text = caughtFish.lore

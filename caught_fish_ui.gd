@@ -11,6 +11,7 @@ var seen: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	image.set_stretch_mode(TextureRect.STRETCH_KEEP_ASPECT_CENTERED)
 	seen = false
 	$Timer.start(2)
 
