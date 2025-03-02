@@ -147,8 +147,8 @@ func showCaughtFish(caughtFish: Fish) ->void:
 	if caughtFish.speciesName == "tungstencube":
 		fishcaught.image = "res://fish/tungsten.jpg"
 	fishcaught.description.text = caughtFish.lore
-	fishcaught.length.text = str(caughtFish.length) #caughtFish.length
-	fishcaught.weight.text = str(caughtFish.weight)
+	fishcaught.length.text = str(snapped(caughtFish.length, 0.01)) #caughtFish.length
+	fishcaught.weight.text = str(snapped(caughtFish.weight, 0.01))
 	
 	
 	fishcaught.visible = true #we save the visibility set for last.
