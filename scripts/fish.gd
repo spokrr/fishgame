@@ -74,9 +74,10 @@ func roll_fish() -> Fish: # will return err in some broken states (db not open?)
 	returnFish.inceptionTime = Time.get_time_string_from_system()
 	returnFish.weight = randfn(1, 0.2) * speciesDict["base_weight"]
 	returnFish.length = randfn(1, 0.2) * speciesDict["base_length"]
-	if returnFish.speciesName == "missing" or returnFish.speciesName.contains("card"): # missing should not be random
-		returnFish.weight = speciesDict["weight"]
-		returnFish.length = speciesDict["length"]
+	# missing and cards should not be randomized size
+	if returnFish.speciesName == "missing" or returnFish.speciesName.contains("card"):
+		returnFish.weight = speciesDict["base_weight"]
+		returnFish.length = speciesDict["base_length"]
 	
 	
 	
