@@ -1,30 +1,44 @@
-[gd_scene load_steps=33 format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=48 format=3 uid="uid://dm0ix3xsxon13"]
 
+[ext_resource type="Script" path="res://scripts/fish.gd" id="1_oi8tk"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="1_pv0t6"]
 [ext_resource type="Script" path="res://scripts/visibilitykillcollision.gd" id="2_38md6"]
-[ext_resource type="Texture2D" uid="uid://cki1fa0hipm8q" path="res://Levels/house.jpeg" id="2_aoy80"]
 [ext_resource type="Script" path="res://scripts/player_rigidbody.gd" id="3_j1ee0"]
 [ext_resource type="Texture2D" uid="uid://d2384ak2derf" path="res://Levels/chernobyl.webp" id="4_71i4p"]
 [ext_resource type="Texture2D" uid="uid://cl1gm4d8cig0a" path="res://Backgrounds/Backyard-Swim-Pond-and-Fountain-1024x636.jpg" id="4_kxt2v"]
-[ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
-[ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
-[ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
+[ext_resource type="Texture2D" uid="uid://cgamtak6urdm8" path="res://Backgrounds/bg_1.png" id="4_xqua4"]
+[ext_resource type="Texture2D" uid="uid://cvjxdpairla0p" path="res://Backgrounds/bg_3.png" id="5_ya05y"]
+[ext_resource type="Texture2D" uid="uid://bvaqhc33fd3w2" path="res://Backgrounds/bg_2.png" id="6_muc6e"]
+[ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
+[ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
+[ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
 [ext_resource type="Texture2D" uid="uid://beuq6xxdsxs30" path="res://Screenshot 2025-02-28 at 7.37.19 PM.png" id="10_7xxbj"]
-[ext_resource type="Texture2D" uid="uid://do1m624e0oc5x" path="res://BunnySprite/MoveLeftAnimation/MoveL_3.png" id="10_ofa0d"]
-[ext_resource type="Texture2D" uid="uid://bldyuhyce003v" path="res://BunnySprite/MoveRightAnimation/MoveR_1.png" id="11_7sbn8"]
-[ext_resource type="Texture2D" uid="uid://c00e6hht0xamf" path="res://BunnySprite/MoveRightAnimation/MoveR_2.png" id="12_ax3sn"]
-[ext_resource type="Texture2D" uid="uid://weh4ix4iad3l" path="res://BunnySprite/MoveRightAnimation/MoveR_3.png" id="13_o67qr"]
-[ext_resource type="Texture2D" uid="uid://nd72ecbyglp" path="res://BunnySprite/StillAnimation/Still_1.png" id="14_fsent"]
-[ext_resource type="Texture2D" uid="uid://c3e7s0bo7oyt6" path="res://BunnySprite/StillAnimation/Still_2.png" id="15_q2bnr"]
-[ext_resource type="Texture2D" uid="uid://dwrvesnb4dstr" path="res://BunnySprite/StillAnimation/Still_3.png" id="16_2d5uy"]
-[ext_resource type="Texture2D" uid="uid://dhvclbphc3t28" path="res://BunnySprite/StillAnimation/Still_2Alt.png" id="17_k1a3y"]
-[ext_resource type="Texture2D" uid="uid://qbux67n000uc" path="res://BunnySprite/StillAnimation/Still_3Alt.png" id="18_un2pg"]
-[ext_resource type="Texture2D" uid="uid://bfhcq3elq7y2w" path="res://BunnySprite/FishingAnimation/Fishing_1.png" id="19_t8eue"]
-[ext_resource type="Texture2D" uid="uid://djolksdpcq1bv" path="res://BunnySprite/FishingAnimation/Fishing_2NoLeg.png" id="20_1735n"]
-[ext_resource type="Texture2D" uid="uid://dlxmhveknysj6" path="res://BunnySprite/FishingAnimation/Fishing_3NoLeg.png" id="21_u4sxw"]
-[ext_resource type="Texture2D" uid="uid://dlsxriryc1o62" path="res://BunnySprite/FishingAnimation/Fishing_2.png" id="22_5dgm2"]
-[ext_resource type="Texture2D" uid="uid://6syo4t3rrlx8" path="res://BunnySprite/FishingAnimation/Fishing_3.png" id="23_oshas"]
+[ext_resource type="Texture2D" uid="uid://do1m624e0oc5x" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_3.png" id="10_ofa0d"]
+[ext_resource type="Texture2D" uid="uid://bldyuhyce003v" path="res://animations/BunnySprite/MoveRightAnimation/MoveR_1.png" id="11_7sbn8"]
+[ext_resource type="Texture2D" uid="uid://c00e6hht0xamf" path="res://animations/BunnySprite/MoveRightAnimation/MoveR_2.png" id="12_ax3sn"]
+[ext_resource type="Texture2D" uid="uid://weh4ix4iad3l" path="res://animations/BunnySprite/MoveRightAnimation/MoveR_3.png" id="13_o67qr"]
+[ext_resource type="Texture2D" uid="uid://nd72ecbyglp" path="res://animations/BunnySprite/StillAnimation/Still_1.png" id="14_fsent"]
+[ext_resource type="Texture2D" uid="uid://c3e7s0bo7oyt6" path="res://animations/BunnySprite/StillAnimation/Still_2.png" id="15_q2bnr"]
+[ext_resource type="Texture2D" uid="uid://dwrvesnb4dstr" path="res://animations/BunnySprite/StillAnimation/Still_3.png" id="16_2d5uy"]
+[ext_resource type="Texture2D" uid="uid://dhvclbphc3t28" path="res://animations/BunnySprite/StillAnimation/Still_2Alt.png" id="17_k1a3y"]
+[ext_resource type="Texture2D" uid="uid://qbux67n000uc" path="res://animations/BunnySprite/StillAnimation/Still_3Alt.png" id="18_un2pg"]
+[ext_resource type="Texture2D" uid="uid://bfhcq3elq7y2w" path="res://animations/BunnySprite/FishingAnimation/Fishing_1.png" id="19_t8eue"]
+[ext_resource type="Texture2D" uid="uid://djolksdpcq1bv" path="res://animations/BunnySprite/FishingAnimation/Fishing_2NoLeg.png" id="20_1735n"]
+[ext_resource type="Texture2D" uid="uid://dlxmhveknysj6" path="res://animations/BunnySprite/FishingAnimation/Fishing_3NoLeg.png" id="21_u4sxw"]
+[ext_resource type="Texture2D" uid="uid://dlsxriryc1o62" path="res://animations/BunnySprite/FishingAnimation/Fishing_2.png" id="22_5dgm2"]
+[ext_resource type="Texture2D" uid="uid://6syo4t3rrlx8" path="res://animations/BunnySprite/FishingAnimation/Fishing_3.png" id="23_oshas"]
 [ext_resource type="Script" path="res://scripts/fishing.gd" id="25_xs2m1"]
+[ext_resource type="Texture2D" uid="uid://dw7ulifispx04" path="res://animations/fishing bobber/Fishing_Bober_Submerged_1.png" id="26_gwkic"]
+[ext_resource type="Texture2D" uid="uid://cfkr5gep1kaqu" path="res://animations/fishing bobber/Fishing_Bober_Submerged_2.png" id="27_djsy3"]
+[ext_resource type="Texture2D" uid="uid://dtd63ygx6hhth" path="res://animations/fishing bobber/Fishing_Bober_Submerged_3.png" id="28_lp7m7"]
+[ext_resource type="Texture2D" uid="uid://csbqyccpy3ab" path="res://animations/fishing bobber/Fishing_Bober_Submerged_-2.png" id="29_rd3y5"]
+[ext_resource type="Texture2D" uid="uid://dua5uvks1cto2" path="res://animations/fishing bobber/Fishing_Bober_Submerged_-3.png" id="30_baevv"]
+[ext_resource type="Texture2D" uid="uid://d2wbnky5747mk" path="res://animations/fishingAlert/excl_1.png" id="31_x6v0r"]
+[ext_resource type="Texture2D" uid="uid://qaetu18yfwu0" path="res://animations/fishingAlert/excl_2.png" id="32_pavry"]
+[ext_resource type="Texture2D" uid="uid://i0xfbik67ne8" path="res://animations/fishingAlert/excl_3.png" id="33_55jsl"]
+[ext_resource type="Texture2D" uid="uid://c8x0brq38q8qq" path="res://animations/fishingAlert/dot_1.png" id="34_b2rtj"]
+[ext_resource type="Texture2D" uid="uid://tm8m5gyd4qgn" path="res://animations/fishingAlert/dot_2.png" id="35_eg1pf"]
+[ext_resource type="Texture2D" uid="uid://8v3v6w2ymcwy" path="res://animations/fishingAlert/dot_3.png" id="36_11ora"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5v47"]
 size = Vector2(58, 1095)
@@ -190,11 +204,82 @@ animations = [{
 radius = 78.3333
 height = 156.667
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o17kp"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_fcfcj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gwkic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_djsy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_lp7m7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_djsy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_gwkic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rd3y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_baevv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_rd3y5")
+}],
+"loop": true,
+"name": &"in water",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4q0j0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_x6v0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pavry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_55jsl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pavry")
+}],
+"loop": true,
+"name": &"fishHooked",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("34_b2rtj")
+}, {
+"duration": 2.0,
+"texture": ExtResource("35_eg1pf")
+}, {
+"duration": 2.0,
+"texture": ExtResource("36_11ora")
+}],
+"loop": true,
+"name": &"waiting",
+"speed": 2.0
+}]
 
 [node name="mainScene" type="Node2D"]
 
+[node name="pond" type="Node2D" parent="."]
+
+[node name="fish" type="Node" parent="pond"]
+unique_name_in_owner = true
+script = ExtResource("1_oi8tk")
+
 [node name="background" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("1_pv0t6")
 
 [node name="leftArea" type="Area2D" parent="background"]
@@ -216,62 +301,90 @@ position = Vector2(960, 540)
 texture = SubResource("PlaceholderTexture2D_p2e62")
 metadata/_edit_lock_ = true
 
-[node name="MainMenu" type="StaticBody2D" parent="background"]
+[node name="level0" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
-visible = false
 position = Vector2(-1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
 
-[node name="backgroundImage" type="TextureRect" parent="background/MainMenu"]
+[node name="backgroundImage" type="TextureRect" parent="background/level0"]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_aoy80")
+texture = ExtResource("4_xqua4")
 
-[node name="mainmenuground" type="CollisionPolygon2D" parent="background/MainMenu"]
-polygon = PackedVector2Array(757, 889, 1190, 903, 1917, 603, 1927, 1088, -8, 1083, -8, 645)
+[node name="lv0ground" type="CollisionPolygon2D" parent="background/level0"]
+polygon = PackedVector2Array(765, 593, 1161, 595, 1917, 603, 1927, 1088, -8, 1083, -9, 627)
 
-[node name="mainmenusky" type="CollisionPolygon2D" parent="background/MainMenu"]
-polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
+[node name="lv0sky" type="CollisionPolygon2D" parent="background/level0"]
+polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -6, 319)
 
 [node name="level1" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
-visible = false
+position = Vector2(-1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
 
 [node name="backgroundImage" type="TextureRect" parent="background/level1"]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("4_kxt2v")
+texture = ExtResource("5_ya05y")
 
-[node name="level1pondCollision" type="CollisionPolygon2D" parent="background/level1"]
-polygon = PackedVector2Array(919, 403, 1144, 396, 1917, 603, 1927, 1088, -8, 1083, -8, 645)
+[node name="ground" type="CollisionPolygon2D" parent="background/level1"]
+polygon = PackedVector2Array(765, 593, 1161, 595, 1917, 603, 1927, 1088, -8, 1083, -9, 627)
 
-[node name="level1skycollision" type="CollisionPolygon2D" parent="background/level1"]
-polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
+[node name="sky" type="CollisionPolygon2D" parent="background/level1"]
+polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -6, 319)
 
 [node name="level2" type="StaticBody2D" parent="background"]
 unique_name_in_owner = true
-visible = false
+position = Vector2(-1, 0)
 physics_material_override = SubResource("PhysicsMaterial_2odfv")
 script = ExtResource("2_38md6")
 
 [node name="backgroundImage" type="TextureRect" parent="background/level2"]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("4_71i4p")
+texture = ExtResource("6_muc6e")
 
-[node name="lv2pond" type="CollisionPolygon2D" parent="background/level2"]
-polygon = PackedVector2Array(904, 571, 1670, 556, 1929, 602, 1927, 1088, -8, 1083, -11, 558)
+[node name="ground" type="CollisionPolygon2D" parent="background/level2"]
+polygon = PackedVector2Array(765, 593, 1161, 595, 1917, 603, 1927, 1088, -8, 1083, -9, 627)
 
-[node name="lv2sky" type="CollisionPolygon2D" parent="background/level2"]
-position = Vector2(0, -91)
+[node name="sky" type="CollisionPolygon2D" parent="background/level2"]
+polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -6, 319)
+
+[node name="level3" type="StaticBody2D" parent="background"]
+unique_name_in_owner = true
+physics_material_override = SubResource("PhysicsMaterial_2odfv")
+script = ExtResource("2_38md6")
+
+[node name="backgroundImage" type="TextureRect" parent="background/level3"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_kxt2v")
+
+[node name="ground" type="CollisionPolygon2D" parent="background/level3"]
+polygon = PackedVector2Array(919, 403, 1144, 396, 1917, 603, 1927, 1088, -8, 1083, -8, 645)
+
+[node name="sky" type="CollisionPolygon2D" parent="background/level3"]
 polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
 
-[node name="playerCharacter" type="Node2D" parent="."]
+[node name="level4" type="StaticBody2D" parent="background"]
+unique_name_in_owner = true
 visible = false
-scale = Vector2(0.6, 0.6)
+physics_material_override = SubResource("PhysicsMaterial_2odfv")
+script = ExtResource("2_38md6")
+
+[node name="backgroundImage" type="TextureRect" parent="background/level4"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("4_71i4p")
+
+[node name="ground" type="CollisionPolygon2D" parent="background/level4"]
+polygon = PackedVector2Array(904, 571, 1670, 556, 1929, 602, 1927, 1088, -8, 1083, -11, 558)
+
+[node name="sky" type="CollisionPolygon2D" parent="background/level4"]
+position = Vector2(0, -91)
+polygon = PackedVector2Array(833, 208, 1223, 210, 1601, 226, 1929, 230, 1926, -9, -9, -7, -9, 226)
 
 [node name="playerRigidbody" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
@@ -298,10 +411,30 @@ scale = Vector2(0.312696, 0.290404)
 texture = ExtResource("10_7xxbj")
 script = ExtResource("25_xs2m1")
 
-[node name="fishingBob" type="Sprite2D" parent="playerRigidbody/fishingRod"]
-position = Vector2(417.47, 238.174)
-scale = Vector2(215.431, 164.065)
-texture = SubResource("PlaceholderTexture2D_o17kp")
+[node name="fishingBob" type="Node2D" parent="playerRigidbody/fishingRod"]
+visible = false
+scale = Vector2(1.5, 1.5)
+
+[node name="Line2D" type="Line2D" parent="playerRigidbody/fishingRod/fishingBob"]
+visible = false
+scale = Vector2(1, 1)
+points = PackedVector2Array(-2.39783, -369.217, 4.70886, 1.91309)
+
+[node name="fishingBobberAnimation" type="AnimatedSprite2D" parent="playerRigidbody/fishingRod/fishingBob"]
+position = Vector2(495.068, 1015.83)
+sprite_frames = SubResource("SpriteFrames_fcfcj")
+animation = &"in water"
+frame_progress = 0.190194
+
+[node name="fishingAlert" type="AnimatedSprite2D" parent="playerRigidbody/fishingRod/fishingBob"]
+position = Vector2(927.107, 778.609)
+scale = Vector2(0.888772, 1.34901)
+sprite_frames = SubResource("SpriteFrames_4q0j0")
+animation = &"waiting"
+frame_progress = 0.465006
+
+[node name="uipopup" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [connection signal="body_entered" from="background/leftArea" to="background" method="_on_left_area_body_entered"]
 [connection signal="body_entered" from="background/leftArea" to="background" method="_on_area_2d_body_entered"]

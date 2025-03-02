@@ -14,18 +14,17 @@ func _ready() -> void:
 
 #this function will be called from the script on the rod, which handles the fishing.
 #this specific function will update the visuals of the sprites.
-func castLine():
-	if state == CharState.WALKIN: # we're walkin, we want to fishin
-		state = CharState.FISHIN
-		#these visibility statements will get changed later.
+func castLine(fishingstate):
+	if fishingstate == "casting": #if the calling function calls to cast the line.
+		state = CharState.FISHIN #cast, and fishin now.
 		get_node("fishingRod").visible = true
 		$playerSprite.play("fishing")
+		$fishingRod/fishingBob/fishingBobberAnimation.play("in water")
+
 		
-		#this gets removed for now, we'll call it on the rod itself
-		#$fishingRod.fishing();
-		
-	elif state == CharState.FISHIN:
+	elif fishingstate == "reeling":
 		state = CharState.WALKIN #  we walkin now
+		$playerSprite.play("default")
 		get_node("fishingRod").visible = false
 
 func _physics_process(delta: float) -> void:

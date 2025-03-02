@@ -5,17 +5,17 @@ func _ready() -> void:
 	pass
 
 func cycle_visible(visibility):
-	print("visibility changed")
+	#print("visibility changed")
 	self.visible = visibility
 	if not visible:
 		for shape in get_children():
 			if shape is CollisionPolygon2D:
 				shape.set_deferred("disabled",true)
-				print("visibility changed")
-				print(shape)
+				#print("visibility changed")
+				#print(shape)
 	else:
 		for shape in get_children():
 			if shape is CollisionPolygon2D:
 				shape.set_deferred("disabled",false)
-				print("visibility changed")
-				print(shape)
+				#print("visibility changed")
+				#print(shape)

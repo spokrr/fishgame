@@ -48,6 +48,7 @@ func openDB():
 		db.drop_table(table_name)
 	db.create_table(table_name, fish_species_table_dict)
 	
+	# (dan:) we don't need to preload the texture here. all we need to do is save the filepath; then we can access that later. 
 	var salmonTexture := preload("res://fish/salmon.png")
 	var tex_data: PackedByteArray = salmonTexture.get_image().save_png_to_buffer()
 	var row_dict: Dictionary = { # construct the salmon row and insert it to the db
