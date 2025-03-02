@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://menu.gd" id="1_bwwkw"]
 [ext_resource type="Texture2D" uid="uid://hj4oiqmopshw" path="res://Backgrounds/clouds/purple menu clouds/static bg.png" id="2_beomi"]
-[ext_resource type="Texture2D" uid="uid://x4by2jp1e6gn" path="res://Backgrounds/buttons/Play Normal.png" id="2_pp67y"]
-[ext_resource type="Texture2D" uid="uid://bt7aihtjutgtm" path="res://Backgrounds/buttons/FISH-GAME-3-1-2025.png" id="3_8qx45"]
-[ext_resource type="Texture2D" path="res://Backgrounds/buttons/Start Press.png" id="3_yydgo"]
-[ext_resource type="Texture2D" uid="uid://c2bx6wfmogoji" path="res://Backgrounds/buttons/title hover.png" id="4_c47fp"]
-[ext_resource type="Texture2D" uid="uid://b0qaojgti0q73" path="res://Backgrounds/buttons/Play Hover.png" id="4_lew53"]
-[ext_resource type="Texture2D" uid="uid://b80gto4f4pkca" path="res://Backgrounds/buttons/Quit Normal.png" id="5_d2rri"]
-[ext_resource type="Texture2D" uid="uid://bk7bsi7unicy3" path="res://Backgrounds/buttons/Quit Press.png" id="6_tfyo8"]
-[ext_resource type="Texture2D" uid="uid://dt5cls63awyqo" path="res://Backgrounds/buttons/Quit Hover.png" id="7_s11gr"]
+[ext_resource type="Texture2D" uid="uid://br1apsvbxwilh" path="res://Backgrounds/buttons/Play Normal.png" id="2_pp67y"]
+[ext_resource type="Texture2D" uid="uid://n4yrgcfmbnh3" path="res://Backgrounds/buttons/title normal.png" id="3_mkqim"]
+[ext_resource type="Texture2D" uid="uid://c4w1p7kja0mid" path="res://Backgrounds/buttons/title hover.png" id="4_c47fp"]
+[ext_resource type="Texture2D" uid="uid://xjfad6d2ufqw" path="res://Backgrounds/buttons/Play Hover.png" id="4_lew53"]
+[ext_resource type="Texture2D" uid="uid://70die1a2icyu" path="res://Backgrounds/buttons/Quit Normal.png" id="5_d2rri"]
+[ext_resource type="Texture2D" uid="uid://c8qk8wpjbodjh" path="res://Backgrounds/buttons/Play Press.png" id="6_8i22i"]
+[ext_resource type="Texture2D" uid="uid://cuk8pxk1s0qt8" path="res://Backgrounds/buttons/Quit Press.png" id="6_tfyo8"]
+[ext_resource type="Texture2D" uid="uid://bgoyr5emlkrob" path="res://Backgrounds/buttons/Quit Hover.png" id="7_s11gr"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nsffy"]
 texture = ExtResource("2_beomi")
@@ -47,7 +47,7 @@ grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.5, 1.5)
 pivot_offset = Vector2(512, 500)
-texture_normal = ExtResource("3_8qx45")
+texture_normal = ExtResource("3_mkqim")
 texture_hover = ExtResource("4_c47fp")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -76,7 +76,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
 texture_normal = ExtResource("2_pp67y")
-texture_pressed = ExtResource("3_yydgo")
+texture_pressed = ExtResource("6_8i22i")
 texture_hover = ExtResource("4_lew53")
 stretch_mode = 0
 
