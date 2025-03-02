@@ -39,6 +39,11 @@ func _on_left_area_body_entered(body: Node2D) -> void:
 		currentLevel-=1
 		levelsDict[currentLevel].cycle_visible(true)		
 		%playerRigidbody.position = Vector2(1740,340)
+	if currentLevel == 0 && body == %playerRigidbody:
+		levelsDict[currentLevel].cycle_visible(false)
+		currentLevel = 2# go to final background
+		levelsDict[currentLevel].cycle_visible(true)
+		%playerRigidbody.position = Vector2(1740,340)
 
 #when entering the trigger on the right side of the screen
 #go to the next biome
@@ -46,5 +51,10 @@ func _on_right_area_body_entered(body: Node2D) -> void:
 	if currentLevel < 2 && body == %playerRigidbody:
 		levelsDict[currentLevel].cycle_visible(false)
 		currentLevel+=1
+		levelsDict[currentLevel].cycle_visible(true)
+		%playerRigidbody.position = Vector2(240,340)
+	if currentLevel == 2 && body == %playerRigidbody:
+		levelsDict[currentLevel].cycle_visible(false)
+		currentLevel = 0
 		levelsDict[currentLevel].cycle_visible(true)
 		%playerRigidbody.position = Vector2(240,340)

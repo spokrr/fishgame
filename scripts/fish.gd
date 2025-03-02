@@ -38,17 +38,16 @@ func roll_fish() -> Fish: # will return err in some broken states (db not open?)
 	var chosen_pool
 	# this match should set chosen_pool to one of the catch_pools
 	print(str(catch_pool, "<== thats the random number we rolled for catch pool"))
-	match catch_pool:
-		100:
-			chosen_pool = 1
-		[90, ..]:
-			chosen_pool = 9
-		[70, ..]:
-			chosen_pool = 20
-		[40, ..]:
-			chosen_pool = 30
-		_:
-			chosen_pool = 40
+	if catch_pool == 100:
+		chosen_pool = 1
+	elif catch_pool >= 90:
+		chosen_pool = 9
+	elif catch_pool >= 70:
+		chosen_pool = 20
+	elif catch_pool >= 40:
+		chosen_pool = 30
+	else:
+		chosen_pool = 40
 	var query_string = str("SELECT COUNT(*) FROM fishspecies WHERE catch_pool=",chosen_pool)
 	if not FishDB.db.query(query_string):
 		# print("failed to query DB for COUNT(*) where catch pool")
@@ -61,8 +60,8 @@ func roll_fish() -> Fish: # will return err in some broken states (db not open?)
 		assert(false, "failed to query DB for fish of that catch pool")
 	# roll a random number between 0 and speciesCount-1 then use it to pick the index of our species
 	var pickedSpeciesIndex = randi() % speciesCount
-	print(str("this is the list of species of that catch pool:"))
-	print(FishDB.db.query_result)
+	#print(str("this is the list of species of that catch pool:"))
+	#print(FishDB.db.query_result)
 	var speciesDict = FishDB.db.query_result[pickedSpeciesIndex]
 	print(str(speciesDict["name"], "<== that's the species we picked from this fishing"))
 	returnFish.speciesName = speciesDict["name"]
@@ -75,6 +74,9 @@ func roll_fish() -> Fish: # will return err in some broken states (db not open?)
 	returnFish.inceptionTime = Time.get_time_string_from_system()
 	returnFish.weight = randfn(1, 0.2) * speciesDict["base_weight"]
 	returnFish.length = randfn(1, 0.2) * speciesDict["base_length"]
+	if returnFish.speciesName == "missing" or returnFish.speciesName.contains("card"): # missing should not be random
+		returnFish.weight = speciesDict["weight"]
+		returnFish.length = speciesDict["length"]
 	
 	
 	

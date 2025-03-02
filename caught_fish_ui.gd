@@ -7,6 +7,7 @@ var seen: bool = false
 @onready var length = get_node("stats/length")
 @onready var weight = get_node("stats/weight")
 @onready var image = get_node("TextureRect/fishImage")
+@onready var rarity = get_node("stats/rarity")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
