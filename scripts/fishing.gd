@@ -17,9 +17,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if currentlyFishing and Input.is_action_just_pressed("confirmButton") and catchTimer.is_stopped() == false: # ui_accept should map to left click (?), just saw this line in a youtube video for godot fishing...
+	if currentlyFishing and Input.is_action_just_pressed("spaceBar") and catchTimer.is_stopped() == false: # ui_accept should map to left click (?), just saw this line in a youtube video for godot fishing...
 		catchFish()
 
+func _input(event):
+	if event.is_action_pressed("spaceBar"):
+		%playerRigidbody.castLine()
+		fishing()
+		
+
+#this will get called every time we hit the spacebar. overload it for different circumstances
 func fishing():
 	if currentlyFishing:
 		return # can't start multiple fishing sessions
@@ -30,6 +37,12 @@ func fishing():
 	var randomTime = randf_range(5.0, 30.0) # timer randomized between 5 to 30 sec
 	fishingTimer.start(randomTime) # start timer
 	print("Casting the fishing line...")
+	
+	#logic for reeling in goes here.
+	#...
+	#...
+	#...
+	#!
 	
 func onFishingTimerTimeout() -> void:
 	print("Fish on the hook!") # when timer runs out, print
