@@ -85,18 +85,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.85098, 0.741176, 0.784314, 0.756863)
 
-[node name="description_label" type="RichTextLabel" parent="lore"]
-layout_mode = 0
-offset_left = 17.0
-offset_top = 13.0
-offset_right = 317.0
-offset_bottom = 213.0
-theme = SubResource("Theme_7lp4e")
-theme_override_fonts/normal_font = ExtResource("3_r3qg4")
-bbcode_enabled = true
-text = "Description:"
-scroll_active = false
-
 [node name="description" type="RichTextLabel" parent="lore"]
 layout_mode = 0
 offset_left = 17.0

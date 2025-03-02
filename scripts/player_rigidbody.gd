@@ -30,7 +30,7 @@ func castLine(fishingstate):
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if state == CharState.WALKIN:
-		var direction = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
+		var direction = Input.get_vector("moveLeft", "moveRight", "ui_text_delete_all_to_right.macos", "ui_text_delete_all_to_right")
 		
 		velocity = direction*speed
 		move_and_slide()
@@ -40,9 +40,9 @@ func _physics_process(delta: float) -> void:
 			$playerSprite.play("MoveR")
 		elif Input.is_action_pressed("moveLeft"):
 			$playerSprite.play("MoveL")
-		elif Input.is_action_pressed("moveDown"):
-			$playerSprite.play("MoveL")
-		elif Input.is_action_pressed("moveUp"):
-			$playerSprite.play("MoveR")
+		#elif Input.is_action_pressed("moveDown"):
+			#$playerSprite.play("MoveL")
+		#elif Input.is_action_pressed("moveUp"):
+			#$playerSprite.play("MoveR")
 		else:
 			$playerSprite.play("default")

@@ -128,25 +128,27 @@ func catchFish() -> void:
 	catchTimer.call_deferred("queue_free") #goodbye timer. thank u for ur service.
 	print("You got a fish!") # maybe supplement this with the fish name? #will do that when we have fish.
 	
-	#this needs to be populated with the caught fish. for now, we use a placeholder default fish.
-	var caughtFish = %fish.roll_fish()
-	showCaughtFish(caughtFish)
+	
+	showCaughtFish(Fish.new().roll_fish())
 
 
 func showCaughtFish(caughtFish: Fish) ->void:
+	print(caughtFish)
 	#this code generates a new instance of the caughtfish UI.
 	var newfishpopup = load("res://caught_fish_ui.tscn")
-	var fishcaught=newfishpopup.instantiate()
+	var fishcaught = newfishpopup.instantiate()
 	%uipopup.add_child(fishcaught)
 	
 	#set the contents of the new ui to that of the caught fish.
 	#TODO: IMPLEMENT THE ROLLFISH FUNCTION ABOVE, SO THESE LINES CAN WORK. NEEDS TO BE DONE.
 	fishcaught.position = Vector2(960,540)
-	#fishcaught.species.text = str("[center]",str(caughtFish.species),"[/center]")
-	#fishcaught.image.texture = caughtFish.portrait
-	#fishcaught.description.text = caughtFish.lore
-	fishcaught.length.text = "yeehaw" #caughtFish.length
-	#fishcaught.weight.text = caughtFish.weight
+	fishcaught.species.text = str("[center]",str(caughtFish.speciesName),"[/center]")
+	fishcaught.image = str("res://fish/", caughtFish.speciesName, ".png")
+	if caughtFish.speciesName == "tungstencube":
+		fishcaught.image = "res://fish/tungsten.jpg"
+	fishcaught.description.text = caughtFish.lore
+	fishcaught.length.text = str(caughtFish.length) #caughtFish.length
+	fishcaught.weight.text = str(caughtFish.weight)
 	
 	
 	fishcaught.visible = true #we save the visibility set for last.
