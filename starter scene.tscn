@@ -1,6 +1,5 @@
-[gd_scene load_steps=34 format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=33 format=3 uid="uid://dm0ix3xsxon13"]
 
-[ext_resource type="Script" path="res://scripts/mainscript.gd" id="1_hsp1n"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="1_pv0t6"]
 [ext_resource type="Script" path="res://scripts/visibilitykillcollision.gd" id="2_38md6"]
 [ext_resource type="Texture2D" uid="uid://cki1fa0hipm8q" path="res://Levels/house.jpeg" id="2_aoy80"]
@@ -194,7 +193,6 @@ height = 156.667
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o17kp"]
 
 [node name="mainScene" type="Node2D"]
-script = ExtResource("1_hsp1n")
 
 [node name="background" type="Node2D" parent="."]
 script = ExtResource("1_pv0t6")
