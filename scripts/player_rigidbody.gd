@@ -3,32 +3,35 @@ extends CharacterBody2D
 
 const speed = 500
 @onready var screen_size = get_viewport_rect().size
-var isCast = false
+enum CharState {
+	FISHIN,
+	WALKIN,
+}
+var state = CharState.WALKIN
 
-func _ready() ->void:
+func _ready() -> void:
 	position = Vector2(400,500)
 
 
 func _input(event):
 	if event.is_action_pressed("spaceBar"):
-		isCast = castLine(isCast) # run the code for casting a line.
+		castLine()
+		# isCast = castLine(isCast) # run the code for casting a line.
 
-func castLine(isCast) -> bool:
-	if isCast == false:
-		isCast = true
+func castLine():
+	if state == CharState.WALKIN: # we're walkin, we want to fishin
+		state = CharState.FISHIN
 		get_node("fishingRod").visible = true
 		$playerSprite.play("fishing")
 		$fishingRod.fishing();
 		
-	elif isCast == true:
-		isCast = false
+	elif state == CharState.FISHIN:
+		state = CharState.WALKIN #  we walkin now
 		get_node("fishingRod").visible = false
-		
-	return isCast
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if isCast == false: 
+	if state == CharState.WALKIN:
 		var direction = Input.get_vector("moveLeft", "moveRight", "moveUp", "moveDown")
 		
 		velocity = direction*speed
