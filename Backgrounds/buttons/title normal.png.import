@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bt7aihtjutgtm"
-path="res://.godot/imported/FISH-GAME-3-1-2025.png-f53e686aefa8603130c80bea52bf248c.ctex"
+uid="uid://n4yrgcfmbnh3"
+path="res://.godot/imported/title normal.png-26d7b7dfa471e293e029bf20e2ff7b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Backgrounds/buttons/FISH-GAME-3-1-2025.png"
-dest_files=["res://.godot/imported/FISH-GAME-3-1-2025.png-f53e686aefa8603130c80bea52bf248c.ctex"]
+source_file="res://Backgrounds/buttons/title normal.png"
+dest_files=["res://.godot/imported/title normal.png-26d7b7dfa471e293e029bf20e2ff7b93.ctex"]
 
 [params]
 
