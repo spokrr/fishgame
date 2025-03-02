@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dm0ix3xsxon13"]
+[gd_scene load_steps=47 format=3 uid="uid://dm0ix3xsxon13"]
 
 [ext_resource type="Script" path="res://scripts/fish.gd" id="1_oi8tk"]
 [ext_resource type="Script" path="res://scripts/background.gd" id="1_pv0t6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cgamtak6urdm8" path="res://Backgrounds/bg_1.png" id="4_xqua4"]
 [ext_resource type="Texture2D" uid="uid://cvjxdpairla0p" path="res://Backgrounds/bg_3.png" id="5_ya05y"]
 [ext_resource type="Texture2D" uid="uid://bvaqhc33fd3w2" path="res://Backgrounds/bg_2.png" id="6_muc6e"]
+[ext_resource type="AudioStream" uid="uid://diup4edqlkyfh" path="res://sounds/music.mp3" id="7_bwh0q"]
 [ext_resource type="Texture2D" uid="uid://dh2p0u3b240bb" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_0.png" id="7_r3qw2"]
 [ext_resource type="Texture2D" uid="uid://d2w4bo0mexdkt" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_1.png" id="8_5n5y5"]
 [ext_resource type="Texture2D" uid="uid://bljtjpp640pjr" path="res://animations/BunnySprite/MoveLeftAnimation/MoveL_2.png" id="9_1or18"]
@@ -22,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bfhcq3elq7y2w" path="res://animations/BunnySprite/FishingAnimation/Fishing_1.png" id="19_t8eue"]
 [ext_resource type="Texture2D" uid="uid://djolksdpcq1bv" path="res://animations/BunnySprite/FishingAnimation/Fishing_2NoLeg.png" id="20_1735n"]
 [ext_resource type="Texture2D" uid="uid://dlxmhveknysj6" path="res://animations/BunnySprite/FishingAnimation/Fishing_3NoLeg.png" id="21_u4sxw"]
+[ext_resource type="AudioStream" uid="uid://pug2ukvj7fy5" path="res://sounds/alert.mp3" id="21_vwtss"]
 [ext_resource type="Texture2D" uid="uid://dlsxriryc1o62" path="res://animations/BunnySprite/FishingAnimation/Fishing_2.png" id="22_5dgm2"]
 [ext_resource type="Texture2D" uid="uid://6syo4t3rrlx8" path="res://animations/BunnySprite/FishingAnimation/Fishing_3.png" id="23_oshas"]
 [ext_resource type="Script" path="res://scripts/fishing.gd" id="25_xs2m1"]
@@ -352,6 +354,14 @@ polygon = PackedVector2Array(765, 593, 1161, 595, 1917, 603, 1927, 1088, -8, 108
 polygon = PackedVector2Array(820, 344, 1223, 340, 1933, 310, 1926, -9, -9, -7, -6, 319)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="background"]
+stream = ExtResource("7_bwh0q")
+volume_db = -7.495
+autoplay = true
+parameters/looping = true
+
+[node name="FishHookAlert" type="AudioStreamPlayer" parent="background"]
+stream = ExtResource("21_vwtss")
+volume_db = -7.495
 
 [node name="playerRigidbody" type="CharacterBody2D" parent="."]
 unique_name_in_owner = true
@@ -396,6 +406,6 @@ metadata/_edit_group_ = true
 [node name="uipopup" type="Node2D" parent="."]
 unique_name_in_owner = true
 
-[connection signal="body_entered" from="background/leftArea" to="background" method="_on_left_area_body_entered"]
 [connection signal="body_entered" from="background/leftArea" to="background" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="background/leftArea" to="background" method="_on_left_area_body_entered"]
 [connection signal="body_entered" from="background/rightArea" to="background" method="_on_right_area_body_entered"]

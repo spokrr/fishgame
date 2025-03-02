@@ -10,7 +10,7 @@ enum CharState {
 var state = CharState.WALKIN
 
 func _ready() -> void:
-	position = Vector2(400,500)
+	position = Vector2(400,200)
 
 #this function will be called from the script on the rod, which handles the fishing.
 #this specific function will update the visuals of the sprites.

@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b64e80bgegcm5"]
+[gd_scene load_steps=6 format=3 uid="uid://b64e80bgegcm5"]
 
 [ext_resource type="Script" path="res://caught_fish_ui.gd" id="1_r6gc0"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_f65cx"]
+[ext_resource type="Texture2D" uid="uid://cet8kvrngs1b7" path="res://Backgrounds/purple border cropped.png" id="2_s30wi"]
+[ext_resource type="FontFile" uid="uid://r3u5yo5r4gb2" path="res://Backgrounds/AldotheApache.ttf" id="3_r3qg4"]
 
 [sub_resource type="Theme" id="Theme_7lp4e"]
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
@@ -39,22 +39,36 @@ offset_right = 400.0
 offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(1, 0.886275, 0.466667, 1)
+color = Color(0.501961, 0.266667, 0.729412, 0.458824)
 metadata/_edit_lock_ = true
 
-[node name="fishImage" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -99.0
+offset_top = -155.0
+offset_right = 99.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_s30wi")
+
+[node name="fishImage" type="TextureRect" parent="TextureRect"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -144.0
-offset_top = -160.0
-offset_right = 144.0
+offset_left = -78.0
+offset_top = -59.5
+offset_right = 78.0
+offset_bottom = 59.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("PlaceholderTexture2D_f65cx")
 
 [node name="lore" type="ColorRect" parent="."]
 layout_mode = 1
@@ -69,7 +83,7 @@ offset_right = 31.0
 offset_bottom = 259.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.459395, 0.439428, 0.397791, 0.486275)
+color = Color(0.85098, 0.741176, 0.784314, 0.756863)
 
 [node name="description_label" type="RichTextLabel" parent="lore"]
 layout_mode = 0
@@ -78,6 +92,7 @@ offset_top = 13.0
 offset_right = 317.0
 offset_bottom = 213.0
 theme = SubResource("Theme_7lp4e")
+theme_override_fonts/normal_font = ExtResource("3_r3qg4")
 bbcode_enabled = true
 text = "Description:"
 scroll_active = false
@@ -105,14 +120,14 @@ offset_right = 348.0
 offset_bottom = -174.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.459395, 0.439428, 0.397791, 0.486275)
+color = Color(0.85098, 0.741176, 0.784314, 0.756863)
 
 [node name="fishSpeciesLabel" type="RichTextLabel" parent="species"]
 layout_mode = 0
-offset_left = -56.0
-offset_top = 16.0
-offset_right = 600.0
-offset_bottom = 80.0
+offset_left = 21.3333
+offset_top = 14.6667
+offset_right = 677.333
+offset_bottom = 78.6667
 theme = SubResource("Theme_7lp4e")
 bbcode_enabled = true
 scroll_active = false
@@ -130,27 +145,30 @@ offset_right = 352.0
 offset_bottom = 259.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.459395, 0.439428, 0.397791, 0.486275)
+color = Color(0.85098, 0.741176, 0.784314, 0.756863)
 
 [node name="height_weight" type="RichTextLabel" parent="stats"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 21.0
-offset_right = 324.0
-offset_bottom = 221.0
+offset_left = 14.6667
+offset_top = 13.6667
+offset_right = 314.667
+offset_bottom = 213.667
 theme = SubResource("Theme_7lp4e")
+theme_override_fonts/normal_font = ExtResource("3_r3qg4")
 bbcode_enabled = true
 text = "Length (kg):
+
+
 
 Weight (inches):"
 scroll_active = false
 
 [node name="length" type="RichTextLabel" parent="stats"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 53.0
-offset_right = 324.0
-offset_bottom = 103.0
+offset_left = 20.0
+offset_top = 48.0
+offset_right = 247.0
+offset_bottom = 98.0
 theme = SubResource("Theme_7lp4e")
 bbcode_enabled = true
 text = "
@@ -159,16 +177,15 @@ scroll_active = false
 
 [node name="weight" type="RichTextLabel" parent="stats"]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 133.0
-offset_right = 324.0
-offset_bottom = 183.0
+offset_left = 21.0
+offset_top = 146.0
+offset_right = 238.0
+offset_bottom = 196.0
 theme = SubResource("Theme_7lp4e")
 bbcode_enabled = true
 scroll_active = false
 
 [node name="funparticles" type="CPUParticles2D" parent="."]
-visible = false
 top_level = true
 position = Vector2(0, -80)
 amount = 25
@@ -180,5 +197,6 @@ orbit_velocity_min = 40.0
 orbit_velocity_max = 40.0
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

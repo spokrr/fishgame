@@ -24,7 +24,13 @@ func _ready() -> void:
 	visible = false
 	pass
 	
-
+func playAlert():
+	var fishHookAlert: AudioStreamPlayer = get_node("background/FishHookAlert") # Replace with correct path
+	if fishHookAlert:
+		fishHookAlert.play()
+	else:
+		print("Error: FishHookAlert node not found!")
+		
 #function to generate and start the fishing timer
 func generateFishingTimer() -> void:
 	fishingTimer = Timer.new() # create a new Timer object
@@ -94,6 +100,7 @@ func fishing():
 func onFishingTimerTimeout() -> void:
 	fishingTimer.call_deferred("queue_free") #queue deletion of timer since it's done its job.
 	print("Fish on the hook!") # when timer runs out, print
+	playAlert()
 	fishingState = FishingStatus.FishHooked
 	$fishingBob/fishingBobberAnimation.stop()
 	$fishingBob/fishingAlert.play("fishHooked")
